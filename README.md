@@ -13,7 +13,7 @@ pip install -r requirements.txt
 # Usage
 ## help
 ```
-usage: pdf2text.py [-h] -i INPUTFILE -o OUTPUTFILE [-s] [-l LANG]
+usage: pdf2text.py [-h] -i INPUTFILE -o OUTPUTFILE [-s] [-l LANG] [-t TRANSLATE TRANSLATE]
 
 options:
   -h, --help            show this help message and exit
@@ -23,6 +23,8 @@ options:
                         output file
   -s, --summarize       summarize text
   -l LANG, --lang LANG  language
+  -t TRANSLATE TRANSLATE, --translate TRANSLATE TRANSLATE
+                        translate text from <lang> to <lang>
 ```
 ## samples
 * simple
@@ -36,4 +38,8 @@ python pdf2text.py -i /home/user/Downloads/hello.pdf -o hello.txt -l eng
 * summarize
 ```bash
 python pdf2text.py -s -i /home/user/Downloads/hello.pdf -o hello.txt -l eng
+```
+* translate
+```bash
+python pdf2text.py -i /home/user/Downloads/hello.pdf -o hello.txt -l eng -t english japanese
 ```
