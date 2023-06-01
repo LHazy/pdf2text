@@ -9,6 +9,11 @@ sudo apt install libtesseract-dev
 ```bash
 pip install -r requirements.txt
 ```
+3. setup openai
+```console
+cp .env.sample .env
+# and paste api key to .env
+```
 
 # Usage
 ## help

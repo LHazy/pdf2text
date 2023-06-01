@@ -49,6 +49,7 @@ def summarize(long_text):
 
 
 def translate(text, from_lang, to_lang):
+    # chat = ChatOpenAI(temperature=0, model_name="gpt-4", openai_api_key=os.getenv('OPENAI_API_KEY'))
     chat = ChatOpenAI(temperature=0, openai_api_key=os.getenv('OPENAI_API_KEY')) # type: ignore
     template = "You are a helpful assistant that translates {from_lang} to {to_lang}."
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)
