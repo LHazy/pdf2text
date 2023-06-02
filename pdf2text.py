@@ -53,7 +53,7 @@ def translate(text, from_lang, to_lang):
     chat = ChatOpenAI(temperature=0, openai_api_key=os.getenv('OPENAI_API_KEY')) # type: ignore
     template = "You are a helpful assistant that translates {from_lang} to {to_lang}."
     system_message_prompt = SystemMessagePromptTemplate.from_template(template)
-    human_template = "{text}"
+    human_template = "```\n{text}\n```"
     human_message_prompt = HumanMessagePromptTemplate.from_template(human_template)
     chat_prompt = ChatPromptTemplate.from_messages([system_message_prompt, human_message_prompt])
     chain = LLMChain(llm=chat, prompt=chat_prompt)

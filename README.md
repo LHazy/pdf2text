@@ -5,7 +5,21 @@
 sudo apt install tesseract-ocr
 sudo apt install libtesseract-dev
 ```
-2. install pip
+2. install packages
+```bash
+pip install -r requirements.txt
+```
+3. setup openai
+```console
+cp .env.sample .env
+# and paste api key to .env
+```
+## Windows
+1. install poppler and add to PATH (ex: `C:\Users\user\AppData\Local\poppler\Library\bin`)  
+https://github.com/oschwartz10612/poppler-windows/releases/
+2. install tesseract and add to PATH (ex: `C:\Users\user\AppData\Local\Programs\Tesseract-OCR`)  
+https://github.com/UB-Mannheim/tesseract/wiki
+3. install packages
 ```bash
 pip install -r requirements.txt
 ```
